@@ -33,25 +33,25 @@
     <section class="whitespace">
         <div class="row" id="login" style="display: block;">
             <h1>Customer Login</h1>
-            <form method="post">
+            <!-- <form method="post"> -->
                 <div>
                     <label for="username" class="label">Username</label>
-                    <input type="text" placeholder="Enter your username email or phone number" name="username" required>
+                    <input type="text" placeholder="Enter your username or email" name="username" id="loginUsername" autofocus>
                 </div>
                 <div>
-                    <label for="password" class="label">Password</label>
-                    <input type="password" placeholder="Enter your password" name="password" required>
+                    <label for="password" class="label" >Password</label>
+                    <input type="password" placeholder="Enter your password" name="password" id="loginPassword">
                 </div>
 
                 <div class="submitButtom">
-                    <input value="Login" type="submit" class="button">
+                    <input value="Login" type="submit" class="button" onclick="checkLogin()">
                     <br><br><br><br>
                     <sub>First time customer?
-                        <input type="reset" value="Sign Up" class="button" onclick="login()">
+                        <input type="reset" value="Sign Up" class="button" onclick="loginSignupSwitcher()">
                     </sub>
                 </div>
 
-            </form>
+            <!-- </form> -->
         </div>
 
         <div class="row" id="signup" style="display: none;">
@@ -78,7 +78,7 @@
                     <input value="Sign up" type="submit" class="button">
                     <br><br><br><br>
                     <sub>Returning customer?
-                        <input type="reset" value="Login" class="button" onclick="login()">
+                        <input type="reset" value="Login" class="button" onclick="loginSignupSwitcher()">
                     </sub>
                 </div>
             </form>
