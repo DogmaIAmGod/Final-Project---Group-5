@@ -1,54 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login-Customer</title>
-    <link rel="stylesheet" href="Software Project.css">
+    <link rel="stylesheet" href="Login-Customer.css">
 </head>
+
 <body>
-    <nav>
-        <ul>
-            <li><a href="Sign Up.html">Sign Up</a></li>
-            <li>
-                <a href="#">Login</a>
-                <ul>
-                    <li><a href="Login-Customer.html">Login-Customer</a></li>
-                    <li><a href="Login-Manager.html">Login-Manager</a></li>
-                </ul>
-            </li>
-            <li><a href="Menu.html">Menu</a></li>
-            <li><a href="Cart.html">Cart</a></li>
-            <li><a href="Payment.html">Payment</a></li>
-            <li><a href="Order.html">Order</a></li>
-            <li><a href="Receipt.html">Receipt</a></li>
-            <li><a href="Management.html">Management</a></li>
-        </ul> 
-    </nav>
     <header>
-        <h1>Login-Customer</h1>
+        <nav>
+            <ul>
+                <li><a href="Sign Up.html">Sign Up</a></li>
+                <li>
+                    <a href="#">Login</a>
+                    <ul>
+                        <li><a href="Login-Customer.html">Login-Customer</a></li>
+                        <li><a href="Login-Manager.html">Login-Manager</a></li>
+                    </ul>
+                </li>
+                <li><a href="Menu.html">Menu</a></li>
+                <li><a href="Cart.html">Cart</a></li>
+                <li><a href="Payment.html">Payment</a></li>
+                <li><a href="Order.html">Order</a></li>
+                <li><a href="Receipt.html">Receipt</a></li>
+                <li><a href="Management.html">Management</a></li>
+            </ul>
+        </nav>
     </header>
-    <section>
-        <div>
-            <form method="post"></form>
-            <div>
-                <label for="username">Username</label>
-                <input type="text" placeholder="Enter your username email or phone number" 
-                name="username" required>
-            </div>
-            <div>
-                <label for="password">Password</label>
-                <input type="password" placeholder="Enter your password" 
-                name="password" required>
-            </div>
-            <div>
-                <button type="submit">Submit</button>
-                <label>
-                    Remember my information?<input type="checkbox" checked="checked" name="memory">
-                </label>
-            </div>
+    <section class="whitespace">
+        <div class="row" id="login" style="display: block;">
+            <h1>Customer Login</h1>
+            <form method="post">
+                <div>
+                    <label for="username" class="label">Username</label>
+                    <input type="text" placeholder="Enter your username email or phone number" name="username" required>
+                </div>
+                <div>
+                    <label for="password" class="label">Password</label>
+                    <input type="password" placeholder="Enter your password" name="password" required>
+                </div>
+
+                <div class="submitButtom">
+                    <input value="Login" type="submit" class="button">
+                    <br><br><br><br>
+                    <sub>First time customer?
+                        <input type="reset" value="Sign Up" class="button" onclick="login()">
+                    </sub>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="row" id="signup" style="display: none;">
+            <h1>Customer sign-up</h1>
+            <form method="post">
+                <div class="labels">
+                    <label for="email" class="label">Email&zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; </label>
+                    <input type="text" placeholder="Enter your email" name="email" required>
+                </div>
+                <div class="labels">
+                    <label for="username" class="label">Username</label>
+                    <input type="text" placeholder="Enter your chosen username" name="username" required>
+                </div>
+                <div class="labels">
+                    <label for="password" class="label">Password</label>
+                    <input type="password" placeholder="Enter your chosen password" name="password" required>
+                </div>
+                <div class="labels">
+                    <label for="news" class="label">Newsletter?
+                        <input type="checkbox" id="news" name="news" checked="">
+                    </label>
+                </div>
+                <div class="submitButtom">
+                    <input value="Sign up" type="submit" class="button">
+                    <br><br><br><br>
+                    <sub>Returning customer?
+                        <input type="reset" value="Login" class="button" onclick="login()">
+                    </sub>
+                </div>
+            </form>
         </div>
     </section>
+    <footer>
+
+    </footer>
+    <script src="Login-Customer.js"></script>
 </body>
+
 </html>

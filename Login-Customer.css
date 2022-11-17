@@ -13,7 +13,9 @@ header {
     width: 100%;
     margin-top: 40px;
     text-align: center;
-    padding: 20px;
+    padding-bottom: 20px;
+    margin: 0;
+    height: 100px;
 }
 nav {
     display: block;
@@ -56,8 +58,7 @@ li:hover ul {
     position: absolute;
     background-color: black;
 }
-label {
-    color: midnightblue;
+.label {
     text-align: center;
     margin: 20px;
 }
@@ -67,7 +68,7 @@ input {
     margin: 20px;
     width: 300px;
 }
-button {
+.button {
     color: white;
     background-color: steelblue;
     text-align: center;
@@ -124,3 +125,48 @@ button {
 .loginclicked {
     display: none;
 }
+
+.whitespace {
+    background-color: white;
+    width: 15cm;
+    height: 15cm;
+    margin: 0 auto;
+    margin-top: 2.5cm;
+    margin-bottom: 2.5cm;
+    border-radius: 200px;
+}
+
+.submitButton {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.row::after {
+clear: both;
+}
+
+.row::before, .row::after {
+    content: "";
+    display: table;
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-top: 170px;
+    justify-content: center;
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    background-image: url(Images/Background\ 1.jpg);
+    height: 100px;
+
+}
+
+.labels {
+    height: 30px;
+    margin: 0;
+}
+
