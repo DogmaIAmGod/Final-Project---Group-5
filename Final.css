@@ -1,3 +1,61 @@
-.payment-option{
-
+.payment-box{
+    text-align: center;
 }
+
+
+.payment-option{
+    
+}
+
+.smallIcon{
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: black;
+    font-size: 120%;
+    margin-right: 10px;
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+li{
+    list-style: none;
+    margin-top: 30px;
+    border-width: 2px;
+    border-style: solid;
+    padding: 15px;
+    max-width: 400px;
+    border-color: lightgray;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    font-weight: normal;
+    color: #000000;
+}
+
+.payment-option-list{
+    text-align: center;
+}
+
+.hover-2 {
+    --h: 1.2em;   /* the height */
+    
+    linea-height: var(--h);
+    color: #0000;
+    overflow: hidden;
+    text-shadow: 
+      0 var(--_t,var(--h)) #fff,
+      0 0 var(--_c,#000);
+    background: 
+      linear-gradient(#1095c1 0 0) 
+      bottom/100% var(--_d, 0) no-repeat;
+    transition: 0.3s;
+  }
+  .hover-2:hover {
+    --_d: 100%;
+    --_t: 0;
+    --_c: #0000;
+  }
