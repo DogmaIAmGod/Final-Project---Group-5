@@ -170,5 +170,6 @@ footer {
     margin: 0;
 }
 
-
-
+#loginUsername {
+    margin-right: 40px;
+}
