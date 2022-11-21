@@ -7,9 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login-Customer</title>
     <link rel="stylesheet" href="Login-Customer.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
 </head>
 
-<body>
+<body> 
+    <!-- onload="thisIsJustATest()"> -->
     <header>
         <nav>
             <ul>
@@ -32,15 +34,17 @@
     </header>
     <section class="whitespace">
         <div class="row" id="login" style="display: block;">
+            <h2 id="testing"></h2>
             <h1>Customer Login</h1>
             <!-- <form method="post"> -->
                 <div>
                     <label for="username" class="label">Username</label>
-                    <input type="text" placeholder="Enter your username or email" name="username" id="loginUsername" autofocus>
+                    <input type="text" placeholder="Enter your username or email" name="username" id="loginUsername" autofocus onfocus="this.select()">
                 </div>
                 <div>
                     <label for="password" class="label" >Password</label>
-                    <input type="password" placeholder="Enter your password" name="password" id="loginPassword">
+                    <input type="password" placeholder="Enter your password" name="password" id="loginPassword" onchange="thisIsJustATest()" onfocus="clearText(this)">
+                    <i class="bi-eye-slash" id="togglePassword" onclick="showPassword()"></i>
                 </div>
 
                 <div class="submitButtom">
