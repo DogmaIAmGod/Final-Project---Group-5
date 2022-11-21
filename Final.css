@@ -1,9 +1,15 @@
-.payment-box{
-    text-align: center;
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    
 }
 
 
-.payment-option{
+.payment-box{
+   
+}
+
+
+ul{
     
 }
 
@@ -22,22 +28,25 @@
 li{
     list-style: none;
     margin-top: 30px;
-    border-width: 2px;
+    border-width: 3px;
     border-style: solid;
-    padding: 15px;
+    padding: 20px;
     max-width: 400px;
     border-color: lightgray;
-    text-align: center;
+   
+    
 }
 
 a{
     text-decoration: none;
-    font-weight: normal;
+    font-weight: bold;
     color: #000000;
+    font-size: large;
 }
 
 .payment-option-list{
-    text-align: center;
+    
+    
 }
 
 .hover-2 {
@@ -58,4 +67,32 @@ a{
     --_d: 100%;
     --_t: 0;
     --_c: #0000;
+  }
+
+  li:hover{
+    border: #1095c1 3px solid;
+  }
+
+  .continue-button{
+    border-width: 2px;
+    border-style: solid;
+    border-color: lightgray;
+    border-radius: 20px;
+    padding: 15px;
+    margin-left: 220px;
+    margin-top: 20px;
+    background-color: #1095c1;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  .continue-button:hover{
+    background-color: white;
+    color: #1095c1;
+    font-weight: bold;
+    border: solid 2px #1095c1;
+  }
+
+  .card-input{
+    
   }
