@@ -29,7 +29,7 @@ function emptyForm() {
         array[i].value = ""
     }
 
-    
+
 }
 
 function testing() {
@@ -73,20 +73,27 @@ function checkLogin() {
         y.focus()
     }
     else {
+        let z = true
         for (let i = 0; i < loginInformation.length; i++) {
             x = document.getElementById("loginUsername")
             y = document.getElementById("loginPassword")
             if ((loginInformation[i].Username.toLowerCase() === x.value || loginInformation[i].Email.toLowerCase() === x.value) && loginInformation[i].Password.toLowerCase() === y.value) {
-                console.log("login successful")
+                z = false
                 break;
             }
             else {
-                y.focus()
-                y.value = ""
-                alert("Invalid Login")
-                break;
+                z = true
             }
+            console.log(z)
         }
+        if (z === true) {
+            y.focus()
+            y.value = ""
+            alert("Invalid Login")
+        } else {
+            console.log("login successful")
+        }
+
     }
 }
 
@@ -153,6 +160,7 @@ function checkSignup() {
             "Email": email.value
         }
         loginInformation.push(x)
+        //switch to login page, place username in username box
         loginSignupSwitcher()
         let y = document.getElementById("loginUsername")
         y.value = x.Username
@@ -165,7 +173,7 @@ function checkAgainstList() {
     let y = document.getElementById("signupUsername").value
     x = x.toLowerCase()
     y = y.toLowerCase()
-    for (let i=0;i<loginInformation.length;i++) {
+    for (let i = 0; i < loginInformation.length; i++) {
         if (x === loginInformation[i].Email.toLowerCase() || y === loginInformation[i].Username.toLowerCase()) {
             return true
         }
