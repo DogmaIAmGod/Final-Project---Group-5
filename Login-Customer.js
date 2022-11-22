@@ -1,7 +1,7 @@
 let loginInformation = [
     {
-        "Username": "Admin",
-        "Password": "Admin123",
+        "Username": "Admin123",
+        "Password": "AdminAdmin",
         "Email": "admin@admin.com"
     },
     {
@@ -29,20 +29,16 @@ function emptyForm() {
         array[i].value = ""
     }
 
+    
+}
 
-
+function testing() {
+    console.log(loginInformation[1].Username)
 }
 
 //function to clear the text in a field
 function clearText(value) {
     value.value = ""
-}
-
-//testing function
-function thisIsJustATest() {
-    let x = document.getElementById("testing")
-    let y = document.getElementById("loginPassword")
-    x.innerHTML = y.value
 }
 
 //Switch between the login and sign up pages
@@ -136,8 +132,14 @@ function checkSignup() {
         password.value = ""
         checkPassword.value = ""
     }
-
+    else if (checkAgainstList() === true) {
+        alert("This account already exists!")
+        email.focus()
+        password.value = ""
+        checkPassword.value = ""
+    }
     else {
+        console.log(loginInformation.includes(email.value))
         //check for newsletter
         let z = document.getElementById("news").checked
         if (z === true) {
@@ -156,4 +158,16 @@ function checkSignup() {
         y.value = x.Username
     }
 
+}
+
+function checkAgainstList() {
+    let x = document.getElementById("signupEmail").value
+    let y = document.getElementById("signupUsername").value
+    x = x.toLowerCase()
+    y = y.toLowerCase()
+    for (let i=0;i<loginInformation.length;i++) {
+        if (x === loginInformation[i].Email.toLowerCase() || y === loginInformation[i].Username.toLowerCase()) {
+            return true
+        }
+    }
 }
