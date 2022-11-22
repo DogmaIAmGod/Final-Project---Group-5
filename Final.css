@@ -101,16 +101,29 @@ a{
   }
 
   .date{
-    width: 74.5px;
-    margin-right: 0;
+    
   }
 
   .CVC{
-    width: 54px;
-    margin-left: 0;
+    
   }
 
   .card-info{
-    margin-top: 10px;
+    margin-top: 20px;
     
   }
+
+  .tableDiv input{
+    border: lightgray solid 2px;
+    padding: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    
+  }
+
+  .tableDiv input:hover{
+    border: solid 2px #1095c1;
+    color: #1095c1;
+  }
+
+  

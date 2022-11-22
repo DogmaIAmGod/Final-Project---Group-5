@@ -32,8 +32,8 @@
                 <button class="continue-button">Continue</button>
             </div>
 </div>
-<p>If you selected card as payment, please enter your information</p>
-<div class="card-info-box">
+
+<!-- <div class="card-info-box">
     <div class="card-info">
         <input class="card-input email" placeholder="Card number" type="text">
     </div>
@@ -50,8 +50,23 @@
     <div class="card-info">
         <input class="zip" placeholder="Zip" type="text">
     </div>
+     -->
     
-    
+     <div class="payment-info">
+        <div class="payment-message">
+            <p>If you selected card, please enter your information here...</p>
+        </div>
+        <div class="tableDiv">
+            <table>
+                <tr><td><input class="email" style="width: 380px; height: 30px;" placeholder="Card number" type="text"></td></tr>
+                <tr><td><input class="date" style="width: 129px; height: 30px;" placeholder="MM / YY" type="text"></td></tr>
+                <tr><td><input class="CVC" style="width: 50px; height: 30px;" placeholder="CVC" type="text"></td></tr>
+                <tr><td><input class="name" style="width: 380px; height: 30px;" placeholder="Name on card" type="text"></td></tr>
+                <tr><td><input class="zip" style="width: 50px; height: 30px;" placeholder="Zip" type="text"></td></tr>
+            </table>
+        </div>
+     </div>
+
 </div>
     <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
 </body>
