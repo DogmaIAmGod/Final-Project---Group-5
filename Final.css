@@ -62,7 +62,7 @@ a{
       0 var(--_t,var(--h)) #fff,
       0 0 var(--_c,#000);
     background: 
-      linear-gradient(#1095c1 0 0) 
+      linear-gradient(powderblue 0 0) 
       bottom/100% var(--_d, 0) no-repeat;
     transition: 0.3s;
   }
@@ -72,8 +72,10 @@ a{
     --_c: #0000;
   }
 
+/* #1095c1 */
+
   li:hover{
-    border: #1095c1 3px solid;
+    border: powderblue 3px solid;
   }
 
   .continue-button{
@@ -84,16 +86,16 @@ a{
     padding: 15px;
     margin-left: 220px;
     margin-top: 20px;
-    background-color: #1095c1;
+    background-color: powderblue;
     font-size: larger;
     font-weight: bold;
   }
 
   .continue-button:hover{
     background-color: white;
-    color: #1095c1;
+    color: powderblue;
     font-weight: bold;
-    border: solid 2px #1095c1;
+    border: solid 2px powderblue;
   }
 
   .card-input{
@@ -122,8 +124,8 @@ a{
   }
 
   .tableDiv input:hover{
-    border: solid 2px #1095c1;
-    color: #1095c1;
+    border: solid 2px powderblue;
+    color: powderblue;
   }
 
   
