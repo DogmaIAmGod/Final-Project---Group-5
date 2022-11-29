@@ -4,12 +4,15 @@
     box-sizing: border-box;
 }
 body {
-    background-image: url(Images/Background\ 4.jpg);
+    background-image: url(Images/WoodenPannel.jpeg);
     font-family: fantasy;
 }
-header {
-    color: steelblue;
+
+footer, header {
     background-image: url(Images/Background\ 1.jpg);
+}
+
+header {
     width: 100%;
     margin-top: 40px;
     text-align: center;
@@ -127,7 +130,7 @@ input {
 }
 
 .whitespace {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     width: 15cm;
     height: 15cm;
     margin: 0 auto;
@@ -158,11 +161,11 @@ clear: both;
     text-align: center;
 }
 
+
+
 footer {
     width: 100%;
-    background-image: url(Images/Background\ 1.jpg);
     height: 100px;
-
 }
 
 .labels {
