@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(Images/Background\ 4.jpg);
+    font-family: fantasy;
+}
+header {
+    color: steelblue;
+    background-image: url(Images/Background\ 1.jpg);
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+}
+nav {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+li {
+    list-style-type: none;
+    display: inline;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 15px;
+}
+a:link {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    color: steelblue;
+    text-decoration: none;
+}
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+a:hover:visited {
+    color: steelblue;
+    text-decoration: none;
+}
+li > ul {
+    display: none;
+}
+li:hover ul {
+    display: block;
+    position: absolute;
+    background-color: black;
+}
+label {
+    color: midnightblue;
+    text-align: center;
+    margin: 20px;
+}
+input {
+    background-color: white;
+    text-align: center;
+    margin: 20px;
+    width: 300px;
+}
+button {
+    color: white;
+    background-color: steelblue;
+    text-align: center;
+    margin: 20px;
+    border-style: ridge;
+    border-color: black;
+    width: 75px;
+}
+.options {
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+    justify-content: center;
+}
+.account {
+    background-image: repeating-radial-gradient(navy, black);
+    width: 30%;
+    text-align: center;
+    padding: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.account button {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    border-style: none;
+    font-size: 25px;
+    width: fit-content;
+    text-align: center;
+}
+.account button:hover {
+    color: cyan;
+    background-color: transparent;
+}
+.account button:checked {
+    display: contents;
+}
+.signup {
+    margin-right: 50px;
+}
+.login {
+    margin-left: 50px;
+}
+.select > .signupclicked {
+    display: contents;
+}
+.select > .loginclicked {
+    display: contents;
+}
+.signupclicked {
+    display: none;
+}
+.loginclicked {
+    display: none;
+}

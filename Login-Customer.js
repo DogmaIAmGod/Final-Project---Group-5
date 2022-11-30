@@ -12,7 +12,27 @@ let loginInformation = [
 ]
 
 let menuItems = [
+    {
+        "itemName": "Mozz Sticks",
+        "itemCost": "6.50"
+    },
+    {
+        "itemName": "Buffalo Wings x12",
+        "itemCost": "12.00"
+    },
+    {
+        "itemName": "Chicken Quesadilla",
+        "itemCost": "$6.70"
+    },
+    {
+        "itemName": "Fried Pickle",
+        "itemCost": "5.00"
+    },
+    {
+        "itemName": "Beef Nachos"
+    }
     
+
 ]
 
 //check if they want the newsletter
