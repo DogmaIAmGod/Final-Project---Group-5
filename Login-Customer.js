@@ -29,9 +29,66 @@ let menuItems = [
         "itemCost": "5.00"
     },
     {
-        "itemName": "Beef Nachos"
+        "itemName": "Beef Nachos",
+        "itemCost": "9.99"
+    },
+    {
+        "itemName": "Soft Pretzels",
+        "itemCost": "5.00"
+    },
+    {
+        "itemName": "Chicken Parm",
+        "itemCost": "12.00"
+    },
+    {
+        "itemName": "Burgers",
+        "itemCost": "8.00"
+    },
+    {
+        "itemName": "Slice of Pizza",
+        "itemCost": "2.00"
+    },
+    {
+        "itemName": "Cheesesteak",
+        "itemCost": "9.99"
+    },
+    {
+        "itemName": "BBQ Ribs",
+        "itemCost": "26.19"
+    },
+    {
+        "itemName": "French Fries",
+        "itemCost": "2.99"
+    },
+    {
+        "itemName": "Baked Mac & Cheese",
+        "itemCost": "4.98"
+    },
+    {
+        "itemName": "Broccoli",
+        "itemCost": "4.00"
+    },
+    {
+        "itemName": "Asparagus",
+        "itemCost": "3.00"
+    },
+    {
+        "itemName": "Loaded Mash Potatos",
+        "itemCost": "6.00"
+    },
+    {
+        "itemName": "Side Salad",
+        "itemCost": "4.00"
+    },
+    {
+        "itemName": "Cheesecake",
+        "itemCost": "6.49"
+    },
+    {
+        "itemName": "Tiramisu",
+        "itemCost": "7.00"
     }
-    
+
 
 ]
 
@@ -210,6 +267,6 @@ function checkAgainstList() {
 }
 
 function paypal() {
-    window.location.href="https://www.paypal.com"
+    window.location.href = "https://www.paypal.com"
 
 }
