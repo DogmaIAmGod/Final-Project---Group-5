@@ -20,7 +20,7 @@ header {
     margin: 0;
     height: 100px;
 }
-nav {
+.nav-bar {
     display: block;
     position: absolute;
     top: 0;
@@ -30,33 +30,33 @@ nav {
     padding-bottom: 10px;
     margin-bottom: 30px;
 }
-li {
+.nav-bar li {
     list-style-type: none;
     display: inline;
     margin-left: 20px;
     margin-right: 20px;
     font-size: 15px;
 }
-a:link {
+.nav-bar a:link {
     color: white;
     text-decoration: none;
 }
-a:hover {
+.nav-bar a:hover {
     color: steelblue;
     text-decoration: none;
 }
-a:visited {
+.nav-bar a:visited {
     color: white;
     text-decoration: none;
 }
-a:hover:visited {
+.nav-bar a:hover:visited {
     color: steelblue;
     text-decoration: none;
 }
-li > ul {
+.nav-bar li > ul {
     display: none;
 }
-li:hover ul {
+.nav-bar li:hover ul {
     display: block;
     position: absolute;
     background-color: black;
@@ -175,4 +175,81 @@ footer {
 
 #loginUsername {
     margin-right: 40px;
+}
+
+.smallIcon{
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: black;
+    font-size: 120%;
+    margin-right: 10px;
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+.payment-option-list li{
+    list-style: none;
+    margin-top: 30px;
+    border-width: 3px;
+    border-style: solid;
+    padding: 20px;
+    max-width: 400px;
+    border-color: lightgray;
+}
+
+.payment-option-list a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #000000;
+    font-size: large;
+}
+
+.hover-2 {
+    --h: 1.2em;   /* the height */
+    
+    linea-height: var(--h);
+    color: #0000;
+    overflow: hidden;
+    text-shadow: 
+      0 var(--_t,var(--h)) #fff,
+      0 0 var(--_c,#000);
+    background: 
+      linear-gradient(powderblue 0 0) 
+      bottom/100% var(--_d, 0) no-repeat;
+    transition: 0.3s;
+  }
+  .hover-2:hover {
+    --_d: 100%;
+    --_t: 0;
+    --_c: #0000;
+  }
+
+  .continue-button{
+    border-width: 2px;
+    border-style: solid;
+    border-color: lightgray;
+    border-radius: 20px;
+    padding: 15px;
+    margin-left: 140px;
+    margin-top: 20px;
+    background-color: powderblue;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  .continue-button:hover{
+    background-color: white;
+    color: powderblue;
+    font-weight: bold;
+    border: solid 2px powderblue;
+  }
+
+.payment-box {
+    margin-left: 2.5cm;
+    padding-top: 2.7cm;
+}
+
+.payment-box h2 {
+    margin-left: 35px;
 }

@@ -11,6 +11,10 @@ let loginInformation = [
     }
 ]
 
+let menuItems = [
+    
+]
+
 //check if they want the newsletter
 let newsletterCheck = 0
 
@@ -45,6 +49,7 @@ function clearText(value) {
 function loginSignupSwitcher() {
     let x = document.getElementById("login")
     let y = document.getElementById("signup")
+    let z = document.getElementById("payment")
     if (x.style.display === "none") {
         y.style.display = "none"
         x.style.display = "block"
@@ -53,6 +58,10 @@ function loginSignupSwitcher() {
         x.style.display = "none"
         y.style.display = "block"
     }
+
+    // x.style.display = "none"
+    // y.style.display = "none"
+    // z.style.display = "block"
 }
 
 
@@ -178,4 +187,9 @@ function checkAgainstList() {
             return true
         }
     }
+}
+
+function paypal() {
+    window.location.href="https://www.paypal.com"
+
 }

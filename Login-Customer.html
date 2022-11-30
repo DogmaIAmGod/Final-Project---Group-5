@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
 </head>
 
-<body onload="emptyForm()"> 
+<body onload="emptyForm(), loginSignupSwitcher()">
 
     <header>
-        <nav>
-            <ul>
+        <nav class="nav-bar">
+            <ul class="nav-bar2">
                 <li><a href="Sign Up.html">Sign Up</a></li>
                 <li>
                     <a href="#">Login</a>
@@ -37,67 +37,98 @@
         <div class="row" id="login" style="display: block;">
             <h2 id="testing"></h2>
             <h1>Customer Login</h1>
-                <div>
-                    <label for="username" class="label">Username</label>
-                    <input type="text" placeholder="Enter your username or email" name="username" id="loginUsername" autofocus onfocus="this.select()" onkeydown="enterLogin(event)">
-                </div>
-                <div>
-                    <label for="password" class="label" >Password</label>
-                    <input type="password" placeholder="Enter your password" name="password" id="loginPassword" onfocus="clearText(this)" onkeydown="enterLogin(event)">
-                    <i class="bi-eye-slash" id="togglePassword" onclick="showPassword()"></i>
-                </div>
+            <div>
+                <label for="username" class="label">Username</label>
+                <input type="text" placeholder="Enter your username or email" name="username" id="loginUsername"
+                    autofocus onfocus="this.select()" onkeydown="enterLogin(event)">
+            </div>
+            <div>
+                <label for="password" class="label">Password</label>
+                <input type="password" placeholder="Enter your password" name="password" id="loginPassword"
+                    onfocus="clearText(this)" onkeydown="enterLogin(event)">
+                <i class="bi-eye-slash" id="togglePassword" onclick="showPassword()"></i>
+            </div>
 
-                <div class="submitButtom">
-                    <input value="Login" type="submit" class="button" onclick="checkLogin()">
-                    <br><br><br><br>
-                    <sub>First time customer?
-                        <input type="reset" value="Sign Up" class="button" onclick="loginSignupSwitcher()">
-                    </sub>
-                </div>
+            <div class="submitButtom">
+                <input value="Login" type="submit" class="button" onclick="checkLogin()">
+                <br><br><br><br>
+                <sub>First time customer?
+                    <input type="reset" value="Sign Up" class="button" onclick="loginSignupSwitcher()">
+                </sub>
+            </div>
         </div>
 
         <div class="row" id="signup" style="display: none;">
             <h1>Customer sign-up</h1>
-                <div class="labels">
-                    <label for="email" class="label">Email&zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; </label>
-                    <input type="text" placeholder="Enter your email" name="email" id="signupEmail" onfocus="this.select()">
-                </div>
-                <div class="labels">
-                    <label for="username" class="label">Username</label>
-                    <input type="text" placeholder="Enter your chosen username" name="username" id="signupUsername" onfocus="this.select()">
-                </div>
-                <div class="labels">
-                    <label for="password" class="label">Password</label>
-                    <input type="password" placeholder="Enter your chosen password" name="password" id="signupPassword" onfocus="this.select()">
-                </div>
+            <div class="labels">
+                <label for="email" class="label">Email&zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; </label>
+                <input type="text" placeholder="Enter your email" name="email" id="signupEmail" onfocus="this.select()">
+            </div>
+            <div class="labels">
+                <label for="username" class="label">Username</label>
+                <input type="text" placeholder="Enter your chosen username" name="username" id="signupUsername"
+                    onfocus="this.select()">
+            </div>
+            <div class="labels">
+                <label for="password" class="label">Password</label>
+                <input type="password" placeholder="Enter your chosen password" name="password" id="signupPassword"
+                    onfocus="this.select()">
+            </div>
 
-                <div class="labels">
-                    <label for="password" class="label">Confirm&zwnj; &zwnj; &zwnj; &zwnj; </label>
-                    <input type="password" placeholder="Confirm your password" name="password" id="checkSignupPassword" onfocus="this.select()">
-                </div>
+            <div class="labels">
+                <label for="password" class="label">Confirm&zwnj; &zwnj; &zwnj; &zwnj; </label>
+                <input type="password" placeholder="Confirm your password" name="password" id="checkSignupPassword"
+                    onfocus="this.select()">
+            </div>
 
-                <div class="labels">
-                    <label for="news" class="label">Newsletter?
-                        <input type="checkbox" id="news" name="news">
-                    </label>
-                </div>
-                <div class="submitButtom">
-                    <input value="Sign up" type="submit" class="button" onclick="checkSignup()">
-                    <br><br><br><br>
-                    <sub>Returning customer?
-                        <input type="reset" value="Login" class="button" onclick="loginSignupSwitcher()">
-                    </sub>
-                </div>
+            <div class="labels">
+                <label for="news" class="label">Newsletter?
+                    <input type="checkbox" id="news" name="news">
+                </label>
+            </div>
+            <div class="submitButtom">
+                <input value="Sign up" type="submit" class="button" onclick="checkSignup()">
+                <br><br><br><br>
+                <sub>Returning customer?
+                    <input type="reset" value="Login" class="button" onclick="loginSignupSwitcher()">
+                </sub>
+            </div>
+        </div>
+
+        <div class="payment-box" id="payment" style="display: none;">
+            <div class="payment-title">
+                <h2>Payment Options We Accept</h2>
+            </div>
+            <div class="payment-option-list">
+                <ul>
+                    <li class="hover-2">
+                        <ion-icon class="smallIcon" name="card"></ion-icon>
+                        <a class="hover-2" href="#">Credit/Debit Card</a>
+                    </li>
+                    <li class="paypal hover-2" onclick="paypal()">
+                        <ion-icon class="smallIcon" name="cash"></ion-icon>
+                        <a class="" href="https://www.paypal.com">PayPal</a>
+                    </li>
+                    <li class="hover-2">
+                        <ion-icon class="smallIcon" name="people"></ion-icon>
+                        <a class="hover-2" href="#">Pay in store</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="continue-to-recipt">
+                <button class="continue-button">Continue</button>
+            </div>
         </div>
 
     </section>
+
 
     <footer>
 
     </footer>
 
     <script src="Login-Customer.js"></script>
-    
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
 </body>
 
 </html>
