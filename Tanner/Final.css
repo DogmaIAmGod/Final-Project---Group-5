@@ -1,0 +1,131 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    margin: 50px;
+    
+}
+
+.payment-box{
+   
+}
+
+
+ul{
+    
+}
+
+.smallIcon{
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: black;
+    font-size: 120%;
+    margin-right: 10px;
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+li{
+    list-style: none;
+    margin-top: 30px;
+    border-width: 3px;
+    border-style: solid;
+    padding: 20px;
+    max-width: 400px;
+    border-color: lightgray;
+   
+    
+}
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #000000;
+    font-size: large;
+}
+
+.payment-option-list{
+    
+    
+}
+
+.hover-2 {
+    --h: 1.2em;   /* the height */
+    
+    linea-height: var(--h);
+    color: #0000;
+    overflow: hidden;
+    text-shadow: 
+      0 var(--_t,var(--h)) #fff,
+      0 0 var(--_c,#000);
+    background: 
+      linear-gradient(powderblue 0 0) 
+      bottom/100% var(--_d, 0) no-repeat;
+    transition: 0.3s;
+  }
+  .hover-2:hover {
+    --_d: 100%;
+    --_t: 0;
+    --_c: #0000;
+  }
+
+/* #1095c1 */
+
+  li:hover{
+    border: powderblue 3px solid;
+  }
+
+  .continue-button{
+    border-width: 2px;
+    border-style: solid;
+    border-color: lightgray;
+    border-radius: 20px;
+    padding: 15px;
+    margin-left: 220px;
+    margin-top: 20px;
+    background-color: powderblue;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  .continue-button:hover{
+    background-color: white;
+    color: powderblue;
+    font-weight: bold;
+    border: solid 2px powderblue;
+  }
+
+  .card-input{
+
+  }
+
+  .date{
+    
+  }
+
+  .CVC{
+    
+  }
+
+  .card-info{
+    margin-top: 20px;
+    
+  }
+
+  .tableDiv input{
+    border: lightgray solid 2px;
+    padding: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    
+  }
+
+  .tableDiv input:hover{
+    border: solid 2px powderblue;
+    color: powderblue;
+  }
+
+  
