@@ -126,11 +126,11 @@
             </div>
             <div class="tableDiv">
                 <table>
-                    <tr><td><input class="email" style="width: 380px; height: 30px;" placeholder="Card number" type="text"></td></tr>
-                    <tr><td><input class="date" style="width: 129px; height: 30px;" placeholder="MM / YY" type="text"></td></tr>
-                    <tr><td><input class="CVC" style="width: 50px; height: 30px;" placeholder="CVC" type="text"></td></tr>
-                    <tr><td><input class="name" style="width: 380px; height: 30px;" placeholder="Name on card" type="text"></td></tr>
-                    <tr><td><input class="zip" style="width: 50px; height: 30px;" placeholder="Zip" type="text"></td></tr>
+                    <tr><td><input class="cardNum" id="cardNum" style="width: 380px; height: 30px;" placeholder="Card number" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"></td></tr>
+                    <tr><td><input class="date" id="date" style="width: 129px; height: 30px;" placeholder="MM / YY" type="month" value="yyyy / mm"></td></tr>
+                    <tr><td><input class="CVC" id="CVC" style="width: 50px; height: 30px;" placeholder="CVC" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"></td></tr>
+                    <tr><td><input class="name" id="name" style="width: 380px; height: 30px;" placeholder="Name on card" type="text"></td></tr>
+                    <tr><td><input class="zip" id="zip" style="width: 70px; height: 30px;" placeholder="Zip" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"></td></tr>
                 </table>
             </div>
             <div class="continue-to-recipt">

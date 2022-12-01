@@ -104,6 +104,11 @@ function emptyForm() {
     array.push(document.getElementById("checkSignupPassword"))
     array.push(document.getElementById("loginUsername"))
     array.push(document.getElementById("loginPassword"))
+    array.push(document.getElementById("cardNum"))
+    array.push(document.getElementById("date"))
+    array.push(document.getElementById("CVC"))
+    array.push(document.getElementById("name"))
+    array.push(document.getElementById("zip"))
     document.getElementById("news").checked = false
 
     for (let i = 0; i < array.length; i++) {
@@ -139,8 +144,8 @@ function loginSignupSwitcher() {
 
     x.style.display = "none"
     y.style.display = "none"
-    z.style.display = "block"
-    a.style.display = "none"
+    z.style.display = "none"
+    a.style.display = "block"
 }
 
 function paymentSwitcher() {
@@ -283,4 +288,8 @@ function checkAgainstList() {
 
 function paypal() {
     window.location.href = "https://www.paypal.com"
+}
+
+function creditCardCheck() {
+
 }
