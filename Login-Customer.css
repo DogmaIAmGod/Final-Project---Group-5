@@ -253,3 +253,21 @@ footer {
 .payment-box h2 {
     margin-left: 35px;
 }
+
+.tableDiv input{
+    border: lightgray solid 2px;
+    padding: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    
+  }
+
+  .tableDiv input:hover{
+    border: solid 2px powderblue;
+    color: powderblue;
+  }
+
+  .payment-info {
+    margin-left: 80px;
+    padding-top: 3.2cm;
+  }

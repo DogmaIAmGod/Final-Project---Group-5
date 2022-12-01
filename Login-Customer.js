@@ -127,6 +127,25 @@ function loginSignupSwitcher() {
     let x = document.getElementById("login")
     let y = document.getElementById("signup")
     let z = document.getElementById("payment")
+    let a = document.getElementById("payment-info")
+    // if (x.style.display === "none") {
+    //     y.style.display = "none"
+    //     x.style.display = "block"
+    // }
+    // else {
+    //     x.style.display = "none"
+    //     y.style.display = "block"
+    // }
+
+    x.style.display = "none"
+    y.style.display = "none"
+    z.style.display = "block"
+    a.style.display = "none"
+}
+
+function paymentSwitcher() {
+    let x = document.getElementById("payment")
+    let y = document.getElementById("payment-info")
     if (x.style.display === "none") {
         y.style.display = "none"
         x.style.display = "block"
@@ -135,10 +154,6 @@ function loginSignupSwitcher() {
         x.style.display = "none"
         y.style.display = "block"
     }
-
-    // x.style.display = "none"
-    // y.style.display = "none"
-    // z.style.display = "block"
 }
 
 
@@ -268,5 +283,4 @@ function checkAgainstList() {
 
 function paypal() {
     window.location.href = "https://www.paypal.com"
-
 }
