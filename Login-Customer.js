@@ -133,19 +133,19 @@ function loginSignupSwitcher() {
     let y = document.getElementById("signup")
     let z = document.getElementById("payment")
     let a = document.getElementById("payment-info")
-    // if (x.style.display === "none") {
-    //     y.style.display = "none"
-    //     x.style.display = "block"
-    // }
-    // else {
-    //     x.style.display = "none"
-    //     y.style.display = "block"
-    // }
+    if (x.style.display === "none") {
+        y.style.display = "none"
+        x.style.display = "block"
+    }
+    else {
+        x.style.display = "none"
+        y.style.display = "block"
+    }
 
-    x.style.display = "none"
-    y.style.display = "none"
-    z.style.display = "none"
-    a.style.display = "block"
+    // x.style.display = "none"
+    // y.style.display = "none"
+    // z.style.display = "none"
+    // a.style.display = "block"
 }
 
 function paymentSwitcher() {
@@ -159,6 +159,11 @@ function paymentSwitcher() {
         x.style.display = "none"
         y.style.display = "block"
     }
+}
+
+function loginToOrder() {
+    let x = document.getElementById("whitespace");
+    x.style.display = "none"
 }
 
 

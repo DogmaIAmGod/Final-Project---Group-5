@@ -8,7 +8,7 @@ body {
     font-family: fantasy;
 }
 
-footer, header {
+.footer, header {
     background-image: url(Images/Background\ 1.jpg);
 }
 
@@ -270,4 +270,10 @@ footer {
   .payment-info {
     margin-left: 80px;
     padding-top: 3.2cm;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
   }
