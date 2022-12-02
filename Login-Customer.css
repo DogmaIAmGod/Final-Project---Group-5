@@ -3,12 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     background-image: url(Images/WoodenPannel.jpeg);
     font-family: fantasy;
 }
 
-.footer, header {
+.footer,
+header {
     background-image: url(Images/Background\ 1.jpg);
 }
 
@@ -20,6 +22,7 @@ header {
     margin: 0;
     height: 100px;
 }
+
 .nav-bar {
     display: block;
     position: absolute;
@@ -30,6 +33,7 @@ header {
     padding-bottom: 10px;
     margin-bottom: 30px;
 }
+
 .nav-bar li {
     list-style-type: none;
     display: inline;
@@ -37,40 +41,49 @@ header {
     margin-right: 20px;
     font-size: 15px;
 }
+
 .nav-bar a:link {
     color: white;
     text-decoration: none;
 }
+
 .nav-bar a:hover {
     color: steelblue;
     text-decoration: none;
 }
+
 .nav-bar a:visited {
     color: white;
     text-decoration: none;
 }
+
 .nav-bar a:hover:visited {
     color: steelblue;
     text-decoration: none;
 }
-.nav-bar li > ul {
+
+.nav-bar li>ul {
     display: none;
 }
+
 .nav-bar li:hover ul {
     display: block;
     position: absolute;
     background-color: black;
 }
+
 .label {
     text-align: center;
     margin: 20px;
 }
+
 input {
     background-color: white;
     text-align: center;
     margin: 20px;
     width: 300px;
 }
+
 .button {
     color: white;
     background-color: steelblue;
@@ -80,12 +93,14 @@ input {
     border-color: black;
     width: 75px;
 }
+
 .options {
     display: flex;
     flex-direction: column;
     flex-flow: wrap;
     justify-content: center;
 }
+
 .account {
     background-image: repeating-radial-gradient(navy, black);
     width: 30%;
@@ -94,6 +109,7 @@ input {
     margin-top: 100px;
     margin-bottom: 100px;
 }
+
 .account button {
     color: white;
     background-color: transparent;
@@ -103,28 +119,36 @@ input {
     width: fit-content;
     text-align: center;
 }
+
 .account button:hover {
     color: cyan;
     background-color: transparent;
 }
+
 .account button:checked {
     display: contents;
 }
+
 .signup {
     margin-right: 50px;
 }
+
 .login {
     margin-left: 50px;
 }
-.select > .signupclicked {
+
+.select>.signupclicked {
     display: contents;
 }
-.select > .loginclicked {
+
+.select>.loginclicked {
     display: contents;
 }
+
 .signupclicked {
     display: none;
 }
+
 .loginclicked {
     display: none;
 }
@@ -145,10 +169,11 @@ input {
 }
 
 .row::after {
-clear: both;
+    clear: both;
 }
 
-.row::before, .row::after {
+.row::before,
+.row::after {
     content: "";
     display: table;
 }
@@ -177,7 +202,7 @@ footer {
     margin-right: 40px;
 }
 
-.smallIcon{
+.smallIcon {
     display: inline-block;
     width: 30px;
     text-align: center;
@@ -188,7 +213,8 @@ footer {
     vertical-align: middle;
     margin-top: -5px;
 }
-.payment-option-list li{
+
+.payment-option-list li {
     list-style: none;
     margin-top: 30px;
     border-width: 3px;
@@ -198,7 +224,7 @@ footer {
     border-color: lightgray;
 }
 
-.payment-option-list a{
+.payment-option-list a {
     text-decoration: none;
     font-weight: bold;
     color: #000000;
@@ -206,26 +232,27 @@ footer {
 }
 
 .hover-2 {
-    --h: 1.2em;   /* the height */
-    
-    linea-height: var(--h);
+    --h: 1.2em;
+    /* the height */
+
+    line-height: var(--h);
     color: #0000;
     overflow: hidden;
-    text-shadow: 
-      0 var(--_t,var(--h)) #fff,
-      0 0 var(--_c,#000);
-    background: 
-      linear-gradient(powderblue 0 0) 
-      bottom/100% var(--_d, 0) no-repeat;
+    text-shadow:
+        0 var(--_t, var(--h)) #fff,
+        0 0 var(--_c, #000);
+    background:
+        linear-gradient(powderblue 0 0) bottom/100% var(--_d, 0) no-repeat;
     transition: 0.3s;
-  }
-  .hover-2:hover {
+}
+
+.hover-2:hover {
     --_d: 100%;
     --_t: 0;
     --_c: #0000;
-  }
+}
 
-  .continue-button{
+.continue-button {
     border-width: 2px;
     border-style: solid;
     border-color: lightgray;
@@ -236,14 +263,14 @@ footer {
     background-color: powderblue;
     font-size: larger;
     font-weight: bold;
-  }
+}
 
-  .continue-button:hover{
+.continue-button:hover {
     background-color: white;
     color: powderblue;
     font-weight: bold;
     border: solid 2px powderblue;
-  }
+}
 
 .payment-box {
     margin-left: 2.5cm;
@@ -254,26 +281,109 @@ footer {
     margin-left: 35px;
 }
 
-.tableDiv input{
+.tableDiv input {
     border: lightgray solid 2px;
     padding: 5px;
     margin-top: 10px;
     font-weight: bold;
-    
-  }
 
-  .tableDiv input:hover{
+}
+
+.tableDiv input:hover {
     border: solid 2px powderblue;
     color: powderblue;
-  }
+}
 
-  .payment-info {
+.payment-info {
     margin-left: 80px;
     padding-top: 3.2cm;
-  }
+}
 
-  .footer {
+.footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-  }
+}
+
+/* Dakoda */
+.app {
+    color: white;
+    text-align: center;
+    font-size: 12pt;
+}
+
+.flip-card-container {
+    width: 200px;
+    height: 100px;
+    perspective: 1000px;
+    padding: 50px;
+}
+
+.flip-card {
+    width: 200px;
+    height: 200px;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.flip-card-container:hover .flip-card {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /* border-radius: 10px; */
+}
+
+.flip-card-back {
+    background-color: #517fa4;
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.flip-card-back p {
+    text-align: center;
+    margin: 1px;
+    font-size: 0.2;
+    line-height: 1.5;
+}
+
+.flip-card-back p span {
+    display: block;
+    font-size: 0.2;
+    margin-top: 1.25;
+}
+
+.grid {
+    margin-top: 140px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.grid1 {
+    margin-top: 2.7cm;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.grid1, .grid {
+    margin-left: 100px;
+}
+
+.display-next-page {
+    margin-top: 4cm;
+    margin-left: 41%;
+}
