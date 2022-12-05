@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
 </head>
 
-<body onload="emptyForm()" id="body">
+<body onload="emptyForm(), loginToOrder()" id="body">
 
     <header>
         <!-- <nav class="nav-bar">
@@ -62,8 +62,8 @@
             <h1>Customer sign-up</h1>
             <div class="labels">
                 <label for="email" class="label">Email&zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; </label>
-                <input type="text" placeholder="Enter your email" name="email" id="signupEmail" 
-                onfocus="this.select()" onkeydown="enterSignup(event)">
+                <input type="text" placeholder="Enter your email" name="email" id="signupEmail" onfocus="this.select()"
+                    onkeydown="enterSignup(event)">
             </div>
             <div class="labels">
                 <label for="username" class="label">Username</label>
@@ -165,13 +165,14 @@
             <div class="flip-card-container">
                 <div class="flip-card">
                     <div class="flip-card-front">
-                        <img src="images/Mozz sticks.jpeg" alt="mozzarella sticks">
+                        <img class="itemImage" src="images/Mozz sticks.jpeg" alt="mozzarella sticks">
                     </div>
                     <div class="flip-card-back">
                         <p>
                             Ingredients:<br> eggs,water,italian seasoning, bread crumbs,salt,flour,
                             cornstarch,mozzarella cheese.<br>
-                            <span>-Mozz Sticks $6.50-</span>
+                            <span class="itemName">Mozz Sticks</span>
+                            <span class="itemPrice">$6.50</span>
                         </p>
                     </div>
                 </div>
@@ -179,12 +180,13 @@
             <div class="flip-card-container">
                 <div class="flip-card">
                     <div class="flip-card-front">
-                        <img src="images/buffalo wings.jpg" alt="buffalo wings">
+                        <img class="itemImage" src="images/buffalo wings.jpg" alt="buffalo wings">
                     </div>
                     <div class="flip-card-back">
                         <p>
                             Ingredients:<br> chicken wings, buffalo sauce
-                            <span><br>-Buffalo wings dozen $12.00-</span>
+                            <br><br><br><br><span class="itemName"> Buffalo Wings</span>
+                            <span class="itemPrice">$12.00</span>
                         </p>
                     </div>
                 </div>
@@ -192,14 +194,15 @@
             <div class="flip-card-container">
                 <div class="flip-card">
                     <div class="flip-card-front">
-                        <img src="images/chickenQ.jpg" alt="Chicken Quesadilla">
+                        <img class="itemImage" src="images/chickenQ.jpg" alt="Chicken Quesadilla">
                     </div>
                     <div class="flip-card-back">
                         <p>
                             Ingredients: fajita seasoning, vegitable oil, green/red peppers, onion, flour tortillas,
                             cheddar
                             cheese
-                            <span>-Chicken Quesadilla $6.70-</span>
+                            <br><br><span class="itemName">Chicken Quesadilla</span>
+                            <span class="itemPrice">$6.70</span>
                         </p>
                     </div>
                 </div>
@@ -207,12 +210,13 @@
             <div class="flip-card-container">
                 <div class="flip-card">
                     <div class="flip-card-front">
-                        <img src="images/fried pickles.jpg" alt="fries pickles">
+                        <img class="itemImage" src="images/fried pickles.jpg" alt="fries pickles">
                     </div>
                     <div class="flip-card-back">
                         <p>
                             Ingredients:<br>dill pickle, bread crumbs, cayenne pepper, black pepper, garlic powder,egg
-                            <span><br>-Fried pickle $5.00-</span>
+                            <br><br><br><span class="itemName">Fried Pickle</span>
+                            <span class="itemPrice">$5.00</span>
                         </p>
                     </div>
                 </div>
@@ -220,14 +224,15 @@
             <div class="flip-card-container">
                 <div class="flip-card">
                     <div class="flip-card-front" id="front">
-                        <img src="images/beef nachos.jpg" alt="nachos">
+                        <img class="itemImage" src="images/beef nachos.jpg" alt="nachos">
                     </div>
                     <div class="flip-card-back" id="back">
                         <p>
                             Ingredients:<br> steak, pepper,chipotle pepper,beans,bacon fat,onion,salt,oregano,pinto
                             beans,chicken broth,
                             nachos,cheddar cheese.
-                            <span><br>-Beef nachos $9.99-</span>
+                            <br><span class="itemName">Beef Nachos</span>
+                            <span class="itemPrice">$9.99</span>
                         </p>
                     </div>
                 </div>
@@ -237,12 +242,13 @@
             <div class="flip-card-container">
                 <div class="flip-card">
                     <div class="flip-card-front">
-                        <img src="images/pretzles.jpg" alt="soft pretzel">
+                        <img class="itemImage" src="images/pretzles.jpg" alt="soft pretzel">
                     </div>
                     <div class="flip-card-back">
                         <p>
                             Ingredients:<br> water,dry yeast,flour,sugar,salt,<br> vegetable oil,baking soda, salt.
-                            <span><br>-Soft Pretzels $5.00-</span>
+                            <br><br><span class="itemName">Soft Pretzels</span>
+                            <span class="itemPrice">$5.00</span>
                         </p>
                     </div>
                 </div>
@@ -250,12 +256,13 @@
             <div class="flip-card-container">
                 <div class="flip-card">
                     <div class="flip-card-front">
-                        <img src="images/chips.jpg" alt="soft pretzel">
+                        <img class="itemImage" src="images/chips.jpg" alt="soft pretzel">
                     </div>
                     <div class="flip-card-back">
                         <p>
                             Ingredients:<br> salt,pepper,chips,house salsa.
-                            <span><br>-Chips and salsa $8.00-</span>
+                            <br><br><br><br><span class="itemName">Chips and Salsa</span>
+                            <span class="itemPrice">$8.00</span>
                         </p>
                     </div>
                 </div>
@@ -263,12 +270,13 @@
             <div class="flip-card-container">
                 <div class="flip-card">
                     <div class="flip-card-front">
-                        <img src="images/cheesefries.jpg" alt="soft pretzel">
+                        <img class="itemImage" src="images/cheesefries.jpg" alt="soft pretzel">
                     </div>
                     <div class="flip-card-back">
                         <p>
                             Ingredients:<br> cheese,french fries, beef, peppers, onion, bacon.
-                            <span><br>- cheese fries $6.00-</span>
+                            <br><br><br><br><span class="itemName">Cheese Fries</span>
+                            <span class="itemPrice">$6.00</span>
                         </p>
                     </div>
                 </div>
@@ -276,12 +284,13 @@
             <div class="flip-card-container">
                 <div class="flip-card">
                     <div class="flip-card-front">
-                        <img src="images/onion.jpg" alt="soft pretzel">
+                        <img class="itemImage" src="images/onion.jpg" alt="soft pretzel">
                     </div>
                     <div class="flip-card-back">
                         <p>
                             Ingredients:<br> onion, seasoning, salt&pepper.
-                            <span><br>-Blooming onion $10.00-</span>
+                            <br><br><br><br><span class="itemName">Blooming Onion</span>
+                            <span class="itemPrice">$10.00</span>
                         </p>
                     </div>
                 </div>
@@ -289,12 +298,13 @@
             <div class="flip-card-container">
                 <div class="flip-card">
                     <div class="flip-card-front">
-                        <img src="images/southwesteggroll.jpg" alt="soft pretzel">
+                        <img class="itemImage" src="images/southwesteggroll.jpg" alt="soft pretzel">
                     </div>
                     <div class="flip-card-back">
                         <p>
                             Ingredients:<br> salt&pepper, beef, seasoning, lettuce, black beans.
-                            <span><br>-Southwest eggroll $1000.00-</span>
+                            <br><br><br><span class="itemName">Southwest Eggroll</span>
+                            <span class="itemPrice">$1000.00</span>
                         </p>
                     </div>
                 </div>
@@ -304,13 +314,14 @@
             <div class="flip-card-container">
                 <div class="flip-card">
                     <div class="flip-card-front">
-                        <img src="images/chicken parm.jpg" alt="chicken parm">
+                        <img class="itemImage" src="images/chicken parm.jpg" alt="chicken parm">
                     </div>
                     <div class="flip-card-back">
                         <p>
                             Ingredients:<br>Traditional Italian sauce, Parmesan cheese, fresh mozzarella cheese.
 
-                            <span><br>-Chicken Parm $12.00-</span>
+                            <br><br><br><span class="itemName">Chicken Parm</span>
+                            <span class="itemPrice">$12.00</span>
                         </p>
                     </div>
                 </div>
@@ -318,13 +329,14 @@
             <div class="flip-card-container">
                 <div class="flip-card">
                     <div class="flip-card-front">
-                        <img src="images/burger.jpg" alt="burgers">
+                        <img class="itemImage" src="images/burger.jpg" alt="burgers">
                     </div>
                     <div class="flip-card-back">
                         <p>
                             Ingredients:<br> fresh ground beef, patty seasoning, traditional bun. american/provolone
                             cheese
-                            <span><br>-Burgers $8.00-</span>
+                            <br><br><br><span class="itemName">Burgers</span>
+                            <span class="itemPrice">$8.00</span>
                         </p>
                     </div>
                 </div>
@@ -332,12 +344,13 @@
             <div class="flip-card-container">
                 <div class="flip-card">
                     <div class="flip-card-front">
-                        <img src="images/pizza.jpg" alt="House pizza">
+                        <img class="itemImage" src="images/pizza.jpg" alt="House pizza">
                     </div>
                     <div class="flip-card-back">
                         <p>
                             Ingredients:<br> Fresh dough, Traditional pizza sauce, fresh pepperoni
-                            <span><br>-Pizza $2.00/slice-</span>
+                            <br><br><br><span class="itemName">Pizza</span>
+                            <span class="itemPrice">$12.00</span>
                         </p>
                     </div>
                 </div>
@@ -345,14 +358,15 @@
             <div class="flip-card-container">
                 <div class="flip-card">
                     <div class="flip-card-front">
-                        <img src="images/cheesesteak.jpg" alt="Cheesesteak">
+                        <img class="itemImage" src="images/cheesesteak.jpg" alt="Cheesesteak">
                     </div>
                     <div class="flip-card-back">
                         <p>
                             Ingredients:<br>Olive oil, butter, onions, red and green peppers, fresh beef, salt and
                             pepper,worcestershire
                             sauce, american cheese.
-                            <span><br>-Cheesesteak $9.99-</span>
+                            <br><span class="itemName">Cheesesteak</span>
+                            <span class="itemPrice">$9.99</span>
                         </p>
                     </div>
                 </div>
@@ -360,13 +374,14 @@
             <div class="flip-card-container">
                 <div class="flip-card">
                     <div class="flip-card-front">
-                        <img src="images/shrimp alfredo.jpg" alt="shrimp alfredo">
+                        <img class="itemImage" src="images/shrimp alfredo.jpg" alt="shrimp alfredo">
                     </div>
                     <div class="flip-card-back">
                         <p>
                             Ingredients:<br> Spaghetti,asparagus,carrots,<br>shrimp, house alfredo sauce, chives, lemon
                             peel.
-                            <span><br>-Shrimp Alfredo $20.00-</span>
+                            <br><br><br><span class="itemName">Shrimp Alfredo</span>
+                            <span class="itemPrice">$20.00</span>
                         </p>
                     </div>
                 </div>
@@ -376,13 +391,14 @@
             <div class="flip-card-container">
                 <div class="flip-card">
                     <div class="flip-card-front">
-                        <img src="images/ribs.jpg" alt="ribs">
+                        <img class="itemImage" src="images/ribs.jpg" alt="ribs">
                     </div>
                     <div class="flip-card-back">
                         <p>
                             Ingredients:<br> Pork ribs, barbecue sauce, molasses, orange juice, red pepper sauce,
                             garlic, salt
-                            <span><br>-BBQ Ribs $26.19 (half $18.99) -</span>
+                            <br><br><br><span class="itemName">BBQ Ribs</span>
+                            <span class="itemPrice">$26.19</span>
                         </p>
                     </div>
                 </div>
@@ -390,12 +406,13 @@
             <div class="flip-card-container">
                 <div class="flip-card">
                     <div class="flip-card-front">
-                        <img src="images/fries.jpg" alt="fries">
+                        <img class="itemImage" src="images/fries.jpg" alt="fries">
                     </div>
                     <div class="flip-card-back">
                         <p>
                             Ingredients:<br> Fresh potato, house seasoning, salt&pepper
-                            <span><br>-French Fries $2.99-</span>
+                            <br><br><br><br><span class="itemName">French Fries</span>
+                            <span class="itemPrice">$2.99</span>
                         </p>
                     </div>
                 </div>
@@ -403,14 +420,14 @@
             <div class="flip-card-container">
                 <div class="flip-card">
                     <div class="flip-card-front">
-                        <img src="images/mac&cheese.jpg" alt="mac&cheese">
+                        <img class="itemImage" src="images/mac&cheese.jpg" alt="mac&cheese">
                     </div>
                     <div class="flip-card-back">
                         <p>
-                            Ingredients:<br> Whole milk, evaporated milk, butter, mustard, salt, pepper, ground cayenne,
-                            elbow macaroni,
-                            cheddar cheese, cheese cubes, parmesan cheese, butter, house bread crumbs.
-                            <span><br>-Baked Mac&Cheese $4.98-</span>
+                            Ingredients:<br> Whole milk, butter, elbow macaroni,
+                            cheddar cheese, parmesan cheese, butter.
+                            <br><br><br><span class="itemName">Baked Mac n Cheese</span>
+                            <span class="itemPrice">$4.98</span>
                         </p>
                     </div>
                 </div>
@@ -418,12 +435,13 @@
             <div class="flip-card-container">
                 <div class="flip-card">
                     <div class="flip-card-front">
-                        <img src="images/broccoli.jpg" alt="broccoli">
+                        <img class="itemImage" src="images/broccoli.jpg" alt="broccoli">
                     </div>
                     <div class="flip-card-back">
                         <p>
-                            Ingredients:<br> Salt,Pepper
-                            <span><br>-Broccoli $4.00-</span>
+                            Ingredients:<br> Salt, Pepper
+                            <br><br><br><br><br><span class="itemName">Broccoli</span>
+                            <span class="itemPrice">$4.00</span>
                         </p>
                     </div>
                 </div>
@@ -431,83 +449,13 @@
             <div class="flip-card-container">
                 <div class="flip-card">
                     <div class="flip-card-front">
-                        <img src="images/asparagus.jpg" alt="asparagus">
+                        <img class="itemImage" src="images/asparagus.jpg" alt="asparagus">
                     </div>
                     <div class="flip-card-back">
                         <p>
                             Ingredients:<br> Lemon juice, seasoning
-                            <span><br>-Asparagus $3.00 -</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="grid" style="display: none;">
-            <div class="flip-card-container">
-                <div class="flip-card">
-                    <div class="flip-card-front">
-                        <img src="images/mash potato.jpg" alt="mash potato">
-                    </div>
-                    <div class="flip-card-back">
-                        <p>
-                            Ingredients:<br>Mashed potato, milk, water, cheddar cheese, bacon, green onions, cream
-                            cheese, pepper
-                            <span><br>-Loaded mash potatos $6.00-</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="flip-card-container">
-                <div class="flip-card">
-                    <div class="flip-card-front">
-                        <img src="images/salad.jpg" alt="salad">
-                    </div>
-                    <div class="flip-card-back">
-                        <p>
-                            Ingredients:<br>Lettuce, tomato, onion, olives, croutons
-                            <span><br>-Side salad $4.00-</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="flip-card-container">
-                <div class="flip-card">
-                    <div class="flip-card-front">
-                        <img src="images/cheesecake.jpg" alt="Cheesecake">
-                    </div>
-                    <div class="flip-card-back">
-                        <p>
-                            Ingredients:<br>vanilla/chocolate wafer, butter, cream cheese, sugar, eggs, vanilla, baking
-                            chips,
-                            half-and-half, mint leaf, strawberry/chocolate.
-                            <span><br>-Cheesecake $6.49-</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="flip-card-container">
-                <div class="flip-card">
-                    <div class="flip-card-front">
-                        <img src="images/tiramisu.jpg" alt="tiramisu">
-                    </div>
-                    <div class="flip-card-back">
-                        <p>
-                            Ingredients:<br> Creamcheese, powdered sugar, rum extract, heavy whipping cream, espresso,
-                            baking cocoa
-                            <span><br>-Tiramisu $7.00-</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="flip-card-container">
-                <div class="flip-card">
-                    <div class="flip-card-front">
-                        <img src="images/icecream.jpg" alt="icecream">
-                    </div>
-                    <div class="flip-card-back">
-                        <p>
-                            Ingredients:<br> Water,milk, sugar.
-                            <span><br>-Icecream cone $7.00-</span>
+                            <br><br><br><br><br><span class="itemName">Asparagus</span>
+                            <span class="itemPrice">$3.00</span>
                         </p>
                     </div>
                 </div>
@@ -515,6 +463,10 @@
         </div>
         <div class="display-next-page">
             <button class="continue-button" onclick="orderPageSwitcher()">Next Page</button>
+            <button class="continue-button more">Order</button>
+        </div>
+        <div class="Purchase">
+            
         </div>
     </section>
 

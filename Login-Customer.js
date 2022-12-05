@@ -11,87 +11,8 @@ let loginInformation = [
     }
 ]
 
-let menuItems = [
-    {
-        "itemName": "Mozz Sticks",
-        "itemCost": "6.50"
-    },
-    {
-        "itemName": "Buffalo Wings x12",
-        "itemCost": "12.00"
-    },
-    {
-        "itemName": "Chicken Quesadilla",
-        "itemCost": "$6.70"
-    },
-    {
-        "itemName": "Fried Pickle",
-        "itemCost": "5.00"
-    },
-    {
-        "itemName": "Beef Nachos",
-        "itemCost": "9.99"
-    },
-    {
-        "itemName": "Soft Pretzels",
-        "itemCost": "5.00"
-    },
-    {
-        "itemName": "Chicken Parm",
-        "itemCost": "12.00"
-    },
-    {
-        "itemName": "Burgers",
-        "itemCost": "8.00"
-    },
-    {
-        "itemName": "Slice of Pizza",
-        "itemCost": "2.00"
-    },
-    {
-        "itemName": "Cheesesteak",
-        "itemCost": "9.99"
-    },
-    {
-        "itemName": "BBQ Ribs",
-        "itemCost": "26.19"
-    },
-    {
-        "itemName": "French Fries",
-        "itemCost": "2.99"
-    },
-    {
-        "itemName": "Baked Mac & Cheese",
-        "itemCost": "4.98"
-    },
-    {
-        "itemName": "Broccoli",
-        "itemCost": "4.00"
-    },
-    {
-        "itemName": "Asparagus",
-        "itemCost": "3.00"
-    },
-    {
-        "itemName": "Loaded Mash Potatos",
-        "itemCost": "6.00"
-    },
-    {
-        "itemName": "Side Salad",
-        "itemCost": "4.00"
-    },
-    {
-        "itemName": "Cheesecake",
-        "itemCost": "6.49"
-    },
-    {
-        "itemName": "Tiramisu",
-        "itemCost": "7.00"
-    }
-]
-
-
-
+let gettingItems = []
+let runningSum = 0;
 
 //This is to be changed in they want newsletter for discount later
 let newsletterCheck = 0
@@ -151,8 +72,10 @@ function emptyForm() {
     for (let i = 0; i < back.length; i++) {
         document.getElementsByClassName("flip-card-back")[i].addEventListener("click", function () { selectBorderBack(this) })
         document.getElementsByClassName("flip-card-front")[i].addEventListener("click", function () { selectBorderFront(this) })
+        document.getElementsByClassName("flip-card-back")[i].addEventListener("click", listenForPurchase)
+        document.getElementsByClassName("flip-card-front")[i].addEventListener("click", listenForPurchase)
     }
-document.getElementById("loginUsername").focus()
+    document.getElementById("loginUsername").focus()
 }
 
 function testing() {
@@ -170,7 +93,7 @@ function loginSignupSwitcher() {
     let y = document.getElementById("signup")
     let z = document.getElementById("payment")
     let a = document.getElementById("payment-info")
-    
+
     if (x.style.display === "none") {
         y.style.display = "none"
         x.style.display = "block"
@@ -184,7 +107,7 @@ function loginSignupSwitcher() {
 
     // x.style.display = "none"
     // y.style.display = "none"
-    // z.style.display = "block"
+    // z.style.display = "none"
     // a.style.display = "none"
 }
 
@@ -258,14 +181,16 @@ function checkLogin() {
             }
             else {
                 z = true
-            }}
+            }
+        }
         if (z === true) {
             y.focus()
             y.value = ""
             alert("Invalid Login")
         } else {
             loginToOrder()
-        }}
+        }
+    }
 }
 
 //Set up switching the eye, black dots, and letters of password
@@ -356,10 +281,42 @@ function checkAgainstList() {
     for (let i = 0; i < loginInformation.length; i++) {
         if (x.toLowerCase() === loginInformation[i].Email.toLowerCase() || y.toLowerCase() === loginInformation[i].Username.toLowerCase()) {
             return true
-        }}
+        }
+    }
 }
 
 //lol - go to paypal page :3
 function paypal() {
     window.location.href = "https://www.paypal.com"
+}
+
+function listenForPurchase(event) {
+    let button = event.target
+    let selectedItem = button.parentElement.parentElement
+    let imageSrc = selectedItem.getElementsByClassName('itemImage')[0].src
+    let itemName = selectedItem.getElementsByClassName("itemName")[0].innerHTML
+    let itemPrice = selectedItem.getElementsByClassName("itemPrice")[0].innerHTML
+    itemPrice = itemPrice.slice(1)
+    if (button.parentElement.style.border === "3pt solid rgb(40, 255, 54)") {
+        gettingItems.push({ itemName, itemPrice, imageSrc })
+        runningSum += Number(itemPrice)
+    } else {
+        let i;
+        for (i = 0; i < gettingItems.length; i++) {
+            if(gettingItems[i].itemName === itemName) {
+                break;
+            }
+        }
+        runningSum -= Number(itemPrice)
+        gettingItems.splice(i, 1)
+    }
+    addItemToBill(itemName, itemPrice, imageSrc)
+}
+
+function addItemToBill(name, price, img) {
+
+}
+
+function clickForPurchase() {
+
 }

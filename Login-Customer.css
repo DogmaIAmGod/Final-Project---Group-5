@@ -258,7 +258,7 @@ footer {
     border-color: lightgray;
     border-radius: 20px;
     padding: 15px;
-    margin-left: 140px;
+    margin-left: 45%;
     margin-top: 20px;
     background-color: powderblue;
     font-size: larger;
@@ -385,5 +385,8 @@ footer {
 
 .display-next-page {
     margin-top: 4cm;
-    margin-left: 41%;
+}
+
+.more {
+    margin-left: .1cm;
 }
