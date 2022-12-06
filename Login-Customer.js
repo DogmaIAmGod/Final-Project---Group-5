@@ -75,10 +75,6 @@ function emptyForm() {
     document.getElementById("loginUsername").focus()
 }
 
-function testing() {
-    console.log(loginInformation[1].Username)
-}
-
 //function to clear the text in a field
 function clearText(value) {
     value.value = ""
@@ -127,9 +123,17 @@ function loginToOrder() {
     let y = document.getElementById("body");
     let x = document.getElementById("whitespace");
     let z = document.getElementById("ordering");
-    x.style.display = "none"
-    z.style.display = "block"
-    y.style.backgroundImage = "url('Images/Background\ 4.jpg')"
+    let a = document.getElementById("loginUsername").value;
+    let b = document.getElementById("manager");
+    if (a.toLowerCase() === "admin123" || a.toLowerCase() === "admin@admin.com") {
+        x.style.display = "none"
+        b.style.display = "block"
+        document.getElementById("header").style.display = "none"
+    } else {
+        x.style.display = "none"
+        z.style.display = "block"
+        y.style.backgroundImage = "url('Images/Background\ 4.jpg')"
+    }
 }
 
 //Changing between sets of 10 items on ordering page
@@ -289,7 +293,7 @@ function paypal() {
 
 //Records data about item
 function listenForPurchase(event) {
-    
+
     let button = event.target
     let selectedItem = button.parentElement.parentElement
     let imageSrc = selectedItem.getElementsByClassName('itemImage')[0].src
@@ -297,7 +301,7 @@ function listenForPurchase(event) {
     let itemPrice = selectedItem.getElementsByClassName("itemPrice")[0].innerHTML
     itemPrice = itemPrice.slice(1)
     if (button.parentElement.style.border === "3pt solid rgb(40, 255, 54)") {
-        gettingItems.push({ itemName, itemPrice, imageSrc})
+        gettingItems.push({ itemName, itemPrice, imageSrc })
         runningSum += Number(itemPrice)
     } else {
         let i;
@@ -317,14 +321,13 @@ function listenForPurchase(event) {
 }
 
 //If num is dec
-function number_test(n)
-{
-   let result = (n - Math.floor(n)) !== 0; 
-  if (result)
-    return "$" + runningSum + "0";
-   else
-     return "$" + runningSum + ".00";
-  }
+function number_test(n) {
+    let result = (n - Math.floor(n)) !== 0;
+    if (result)
+        return "$" + runningSum + "0";
+    else
+        return "$" + runningSum + ".00";
+}
 
 //populate final list with items and sum
 function clickForPurchase() {
@@ -337,14 +340,13 @@ function clickForPurchase() {
 
 
     let addToDiv = document.getElementsByClassName("order-list")[0];
-    addToDiv.innerHTML=""
+    addToDiv.innerHTML = ""
 
     for (let i = 0; i < gettingItems.length; i++) {
         let createDiv = document.createElement('div');
         let image = gettingItems[i].imageSrc
         let name = gettingItems[i].itemName
         let price = gettingItems[i].itemPrice
-        console.log(gettingItems[i].imageSrc)
         createDiv.innerHTML = creatingElement(image, name, price)
         addToDiv.append(createDiv)
     }
@@ -359,7 +361,7 @@ function creatingElement(image, name, price) {
     <h3 class="itemName">${name}</h3>
     <h3 class="itemPrice">$${price}</h3>
 </div>`
-return inRowContents
+    return inRowContents
 }
 
 //Maybe you want to order or remove items
@@ -373,10 +375,10 @@ function goBack() {
 
 //Switch to checkout page
 function checkOut() {
-document.getElementById("receipt").style.display = "none"
-document.getElementById("whitespace").style.display = "block"
-document.getElementById("login").style.display = "none"
-document.getElementById("payment").style.display = "block"
+    document.getElementById("receipt").style.display = "none"
+    document.getElementById("whitespace").style.display = "block"
+    document.getElementById("login").style.display = "none"
+    document.getElementById("payment").style.display = "block"
 }
 
 //reload the page to logout
@@ -405,5 +407,33 @@ function payInStore() {
     else {
         x.style.display = "none"
         y.style.display = "block"
+    }
+}
+
+var skillList = "";
+var skillTotal = 0;
+function addSkill() {
+    var skills = document.getElementById("addSkill").value;
+    if (skills != "") {
+        skillList += "<li><span name='skillItem' id='skillItem" + skillTotal + "'>" + skills + "</span> " +
+            "<a onclick='removeSkill()'>-</a></li>";
+        skillTotal++;
+        document.getElementById("skill").innerHTML = skillList;
+        document.getElementById("addSkill").value = "";
+    }
+}
+function removeSkill() {
+    skillList = "";
+    var items = document.querySelectorAll("#skill li"), index, tab = [];
+    for (var j = 0; j < items.length; j++) {
+        tab.push(items[j].innerHTML);
+    }
+    for (var j = 0; j < items.length; j++) {
+        items[j].onclick = function () {
+
+            index = tab.indexOf(this.innerHTML);
+            items[index].parentNode.removeChild(items[index]);
+            tab.splice(j, 1);
+        };
     }
 }
