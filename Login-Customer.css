@@ -509,3 +509,207 @@ height: max-content;
     justify-content: space-between;
     border-top: 2px solid lightgray;
 }
+
+.options {
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+    justify-content: center;
+}
+.account {
+    background-image: repeating-radial-gradient(navy, black);
+    width: 30%;
+    text-align: center;
+    padding: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.account button {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    border-style: none;
+    font-size: 25px;
+    width: fit-content;
+    text-align: center;
+}
+.account button:hover {
+    color: cyan;
+    background-color: transparent;
+}
+.account button:checked {
+    display: contents;
+}
+.signup {
+    margin-right: 50px;
+}
+.login {
+    margin-left: 50px;
+}
+.select > .signupclicked {
+    display: contents;
+}
+.select > .loginclicked {
+    display: contents;
+}
+.signupclicked {
+    display: none;
+}
+.loginclicked {
+    display: none;
+}
+.items {
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+    justify-content: center;
+}
+.menu {
+    width: 400px;
+    text-align: center;
+}
+.appetizers {
+    margin: 50px;
+}
+.main {
+    margin: 50px;
+}
+.sides {
+    margin: 50px;
+}
+.desserts {
+    margin: 50px;
+}
+.food {
+    color: white;
+    background-color: black;
+}
+.mozz {
+    margin: 50px;
+}
+.buff {
+    margin: 50px;
+}
+.ques {
+    margin: 50px;
+}
+.pickles {
+    margin: 50px;
+}
+.nachos {
+    margin: 50px;
+}
+.pretzel {
+    margin: 50px;
+}
+.parm {
+    margin: 50px;
+}
+.burger {
+    margin: 50px;
+}
+.pizza {
+    margin: 50px;
+}
+.steak {
+    margin: 50px;
+}
+.shrimp {
+    margin: 50px;
+}
+.ribs {
+    margin: 50px;
+}
+.fries {
+    margin: 50px;
+}
+.mac {
+    margin: 50px;
+}
+.broc {
+    margin: 50px;
+}
+.asp {
+    margin: 50px;
+}
+.mash {
+    margin: 50px;
+}
+.salad {
+    margin: 50px;
+}
+.cake {
+    margin: 50px;
+}
+.tira {
+    margin: 50px;
+}
+.access {
+    color: white;
+    background-color: black;
+    width: 100%;
+    padding: 20px;
+}
+/* Here's all the new stuff */
+.manager {
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+    align-items: center;
+}
+.admin {
+    color: white;
+    background-image: repeating-radial-gradient(forestgreen, black);
+    width: 100%;
+    padding: 20px;
+    align-items: center;
+}
+.admin button {
+    color: black;
+    background-color: transparent;
+    border-style: none;
+    font-family: fantasy;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.admin button:hover {
+    color: white;
+}
+.admin li {
+    list-style: none;
+}
+.admin label {
+    color: white;
+}
+.template {
+    color: white;
+    background-image: repeating-radial-gradient(crimson, black);
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+.template button {
+    color: black;
+    background-color: transparent;
+    border-style: none;
+    font-family: fantasy;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.template li {
+    list-style: none;
+    display: inline;
+    margin: 10px;
+}
+.template h1 {
+    margin: 10px;
+}
+
+.managerHeader {
+    color: steelblue;
+    background-image: url(Images/Background\ 1.jpg);
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+}
