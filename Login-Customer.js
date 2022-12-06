@@ -10,12 +10,8 @@ let loginInformation = [
         "Email": "sample@customer.com",
     }
 ]
-
 let gettingItems = []
 let runningSum = 0;
-
-//This is to be changed in they want newsletter for discount later
-let newsletterCheck = 0
 
 
 //When you want to order an item, click on the back of a card
@@ -63,6 +59,7 @@ function emptyForm() {
     array.push(document.getElementById("name"))
     array.push(document.getElementById("zip"))
     document.getElementById("news").checked = false
+    document.getElementsByClassName("orderButton")[0].disabled = true;
 
     for (let i = 0; i < array.length; i++) {
         array[i].value = ""
@@ -290,7 +287,9 @@ function paypal() {
     window.location.href = "https://www.paypal.com"
 }
 
+//Records data about item
 function listenForPurchase(event) {
+    
     let button = event.target
     let selectedItem = button.parentElement.parentElement
     let imageSrc = selectedItem.getElementsByClassName('itemImage')[0].src
@@ -298,25 +297,113 @@ function listenForPurchase(event) {
     let itemPrice = selectedItem.getElementsByClassName("itemPrice")[0].innerHTML
     itemPrice = itemPrice.slice(1)
     if (button.parentElement.style.border === "3pt solid rgb(40, 255, 54)") {
-        gettingItems.push({ itemName, itemPrice, imageSrc })
+        gettingItems.push({ itemName, itemPrice, imageSrc})
         runningSum += Number(itemPrice)
     } else {
         let i;
         for (i = 0; i < gettingItems.length; i++) {
-            if(gettingItems[i].itemName === itemName) {
+            if (gettingItems[i].itemName === itemName) {
                 break;
             }
         }
         runningSum -= Number(itemPrice)
         gettingItems.splice(i, 1)
     }
-    addItemToBill(itemName, itemPrice, imageSrc)
+
+    let total = document.getElementById("total")
+    total.innerHTML = number_test(runningSum)
+    enableOrder()
+
 }
 
-function addItemToBill(name, price, img) {
+//If num is dec
+function number_test(n)
+{
+   let result = (n - Math.floor(n)) !== 0; 
+  if (result)
+    return "$" + runningSum + "0";
+   else
+     return "$" + runningSum + ".00";
+  }
 
-}
-
+//populate final list with items and sum
 function clickForPurchase() {
+    let y = document.getElementById("body");
+    y.style.backgroundImage = "none"
+    y.style.backgroundColor = "powderblue"
+    document.getElementById("ordering").style.display = "none";
+    document.getElementById("header").style.display = "none";
+    document.getElementById("receipt").style.display = "block";
 
+
+    let addToDiv = document.getElementsByClassName("order-list")[0];
+    addToDiv.innerHTML=""
+
+    for (let i = 0; i < gettingItems.length; i++) {
+        let createDiv = document.createElement('div');
+        let image = gettingItems[i].imageSrc
+        let name = gettingItems[i].itemName
+        let price = gettingItems[i].itemPrice
+        console.log(gettingItems[i].imageSrc)
+        createDiv.innerHTML = creatingElement(image, name, price)
+        addToDiv.append(createDiv)
+    }
+
+}
+
+//creates elements for clickForPurchase
+function creatingElement(image, name, price) {
+    let inRowContents = `
+    <div class="order-row">
+    <img src="${image}" alt="" class="orderImg">
+    <h3 class="itemName">${name}</h3>
+    <h3 class="itemPrice">$${price}</h3>
+</div>`
+return inRowContents
+}
+
+//Maybe you want to order or remove items
+function goBack() {
+    document.getElementById("ordering").style.display = "block";
+    document.getElementById("header").style.display = "block";
+    document.getElementById("receipt").style.display = "none";
+    let y = document.getElementById("body");
+    y.style.backgroundImage = "url('Images/Background\ 4.jpg')"
+}
+
+//Switch to checkout page
+function checkOut() {
+document.getElementById("receipt").style.display = "none"
+document.getElementById("whitespace").style.display = "block"
+document.getElementById("login").style.display = "none"
+document.getElementById("payment").style.display = "block"
+}
+
+//reload the page to logout
+function logout() {
+    location.reload()
+}
+
+//If you aren't ordering any items,
+//Why would you be able to click on the order button
+function enableOrder() {
+    if (gettingItems.length === 0) {
+        document.getElementsByClassName("orderButton")[0].disabled = true;
+    } else {
+        document.getElementsByClassName("orderButton")[0].disabled = false;
+    }
+}
+
+//Paying in store switcher
+function payInStore() {
+    let x = document.getElementById("payment")
+    let y = document.getElementById("thankYou")
+    if (x.style.display === "none") {
+        y.style.display = "none"
+        x.style.display = "block"
+    }
+    else {
+        x.style.display = "none"
+        y.style.display = "block"
+    }
 }

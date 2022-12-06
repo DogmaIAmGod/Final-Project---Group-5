@@ -265,6 +265,28 @@ footer {
     font-weight: bold;
 }
 
+.continue-button2 {
+    border-width: 2px;
+    border-style: solid;
+    border-color: lightgray;
+    border-radius: 20px;
+    padding: 15px;
+    margin-left: 7%;
+    margin-right: 10%;
+    margin-top: 20px;
+    background-color: powderblue;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.continue-button2:hover {
+    background-color: white;
+    color: powderblue;
+    font-weight: bold;
+    border: solid 2px powderblue;
+}
+
+
 .continue-button:hover {
     background-color: white;
     color: powderblue;
@@ -297,6 +319,16 @@ footer {
 .payment-info {
     margin-left: 80px;
     padding-top: 3.2cm;
+}
+
+#fuckThis {
+    margin-left: 50px;
+}
+
+.payment-info2 {
+    margin-left: 34px;
+    padding-top: 5.7cm;
+    text-align: center;
 }
 
 .footer {
@@ -389,4 +421,91 @@ footer {
 
 .more {
     margin-left: .1cm;
+}
+
+/* Tanner */
+.receipt {
+    margin: 50px;
+    text-align: center;
+    background-color: powderblue;
+    height: auto;
+    width: 100%;
+}
+
+.order-box{
+    background-color: white;
+    width: 800px;
+height: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    box-shadow: 0px 25px 40px #1687d933;
+}
+
+
+.header1{
+    justify-content: space-between;
+    display: flex;
+}
+
+.header1 a{
+    text-decoration: none;
+    color: gray;
+}
+
+.header1 a:hover{
+    color: powderblue;
+}
+
+.order-row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.order-row a{
+    text-decoration: none;
+    color: gray;
+}
+
+.order-row a:hover{
+    color: powderblue;
+}
+
+.order-row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    
+}
+
+.checkout-btn{
+    border-width: 2px;
+    border-style: solid;
+    border-color: lightgray;
+    border-radius: 20px;
+    padding: 15px;
+    background-color: powderblue;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.checkout-btn:hover{
+    background-color: white;
+    color: powderblue;
+    font-weight: bold;
+    border: solid 2px powderblue;
+}
+
+.orderImg {
+    width: 100px;
+    height: 70px;
+}
+
+.checkout-row {
+    display: flex;
+    padding: 1cm;
+    margin-top: 1cm;
+    justify-content: space-between;
+    border-top: 2px solid lightgray;
 }

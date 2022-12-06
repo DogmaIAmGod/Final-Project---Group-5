@@ -11,7 +11,7 @@ body{
 .order-box{
     background-color: white;
     width: 800px;
-    height: 450px;
+    height: max-content;
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
@@ -89,4 +89,14 @@ body{
     color: powderblue;
     font-weight: bold;
     border: solid 2px powderblue;
+}
+
+.orderImg {
+    width: 100px;
+    height: 70px;
+}
+
+.checkout-row {
+    display: flex;
+    justify-content: space-between;
 }

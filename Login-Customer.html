@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
 </head>
 
-<body onload="emptyForm(), loginToOrder()" id="body">
+<body onload="emptyForm()" id="body">
 
-    <header>
+    <header id="header">
         <!-- <nav class="nav-bar">
             <ul class="nav-bar2">
                 <li><a href="Sign Up.html">Sign Up</a></li>
@@ -48,7 +48,6 @@
                     onfocus="clearText(this)" onkeydown="enterLogin(event)">
                 <i class="bi-eye-slash" id="togglePassword" onclick="showPassword()"></i>
             </div>
-
             <div class="submitButtom">
                 <input value="Login" type="submit" class="button" onclick="checkLogin()">
                 <br><br><br><br>
@@ -57,7 +56,6 @@
                 </sub>
             </div>
         </div>
-
         <div class="row" id="signup" style="display: none;">
             <h1>Customer sign-up</h1>
             <div class="labels">
@@ -75,13 +73,11 @@
                 <input type="password" placeholder="Enter your chosen password" name="password" id="signupPassword"
                     onfocus="this.select()" onkeydown="enterSignup(event)">
             </div>
-
             <div class="labels">
                 <label for="password" class="label">Confirm&zwnj; &zwnj; &zwnj; &zwnj; </label>
                 <input type="password" placeholder="Confirm your password" name="password" id="checkSignupPassword"
                     onfocus="this.select()" onkeydown="enterSignup(event)">
             </div>
-
             <div class="labels">
                 <label for="news" class="label">Newsletter?
                     <input type="checkbox" id="news" name="news">
@@ -95,7 +91,6 @@
                 </sub>
             </div>
         </div>
-
         <div class="payment-box" id="payment" style="display: none;">
             <div class="payment-title">
                 <h2>Payment Options We Accept</h2>
@@ -110,17 +105,22 @@
                         <ion-icon class="smallIcon" name="cash"></ion-icon>
                         <a class="" href="https://www.paypal.com">PayPal</a>
                     </li>
-                    <li class="hover-2">
+                    <li class="hover-2" onclick="payInStore()">
                         <ion-icon class="smallIcon" name="people"></ion-icon>
                         <a class="hover-2" href="#">Pay in store</a>
                     </li>
                 </ul>
             </div>
-            <!-- <div class="continue-to-recipt">
-                <button class="continue-button">Continue</button>
-            </div> -->
         </div>
 
+        <div style="display: none;" class="thankYou payment-info2" id="thankYou">
+            <h3>Thank you for your order, <br> a server will be with you in a moment</h3>
+            <div id="fuckThis">
+                <button class="continue-button2 more" onclick="logout()">Log Out</button>
+                <button class="continue-button2" onclick="payInStore()">Go back</button>
+            </div>
+
+        </div>
         <div class="payment-info" style="display: none;" id="payment-info">
             <div class="payment-message">
                 <p>You've selected card, please enter your information here...</p>
@@ -154,7 +154,8 @@
                 </table>
             </div>
             <div class="continue-to-recipt">
-                <button class="continue-button" onclick="paymentSwitcher()">Go back</button>
+                <button class="continue-button2 more" onclick="logout()">Pay and Log Out</button>
+                <button class="continue-button2" onclick="paymentSwitcher()">Go back</button>
             </div>
         </div>
 
@@ -463,16 +464,27 @@
         </div>
         <div class="display-next-page">
             <button class="continue-button" onclick="orderPageSwitcher()">Next Page</button>
-            <button class="continue-button more">Order</button>
-        </div>
-        <div class="Purchase">
-            
+            <button class="continue-button more orderButton" id="orderButton" onclick="clickForPurchase()"
+                disabled="true">Order</button>
         </div>
     </section>
 
-
-    <!-- <footer class="footer"></footer> -->
-
+    <section id="receipt" class="receipt" style="display: none;">
+        <div class="order-box">
+            <div class="header1">
+                <h2>Order details</h2>
+                <h5><a href="#" onclick="goBack()">Edit order</a></h5>
+            </div>
+            <div class="order-list">
+            </div>
+            <div class="checkout-row">
+                <h3>Total: </h3>
+                <h3 id="total"></h3>
+            </div>
+            <button class="checkout-btn" onclick="checkOut()">Checkout</button>
+        </div>
+    </section>
+    
     <script src="Login-Customer.js"></script>
     <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
 </body>
