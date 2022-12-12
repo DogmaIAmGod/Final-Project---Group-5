@@ -324,7 +324,7 @@ function listenForPurchase(event) {
 function number_test(n) {
     let result = (n - Math.floor(n)) !== 0;
     if (result)
-        return "$" + runningSum + "0";
+        return "$" + Math.round(runningSum * 100) / 100 + "0";
     else
         return "$" + runningSum + ".00";
 }
